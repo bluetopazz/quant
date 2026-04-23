@@ -39,3 +39,38 @@ Date,Pair,Theme,Target_Asset,Strategy,Contracts_Sized,Signal_ZScore,Signal_Veloc
   - The ""Chop"" environment favors a neutral strategy like the Iron_Condor, which can benefit from both time decay and potential increases in volatility without being overly directional.
 
 By combining these analyses, we conclude that an Iron_Condor on FXE is the optimal strategy to leverage the current market conditions."
+2026-04-02,CHF_EUR,European_Divergence,FXE (via Short EUR),Iron_Condor,1,0.4014294107344645,-0.10940429445208522,0.8823927139688283,54.39803439803438,24.46628187950555,24.46333170577656,58.13333333333297,-129.4588970501701,"### 1. Volatility Regime
+
+**Global Risk Volatility: High/Expensive**
+
+- **Explanation:** The VIX IV Rank is at 54.4%, which indicates that implied volatility is above the median level over the past year, making it relatively expensive compared to historical norms. This suggests that market participants are currently pricing in higher-than-average levels of uncertainty and risk.
+
+**Why this favors selling premium:**
+- Selling premium strategies (such as Bull_Put_Spread or Iron_Condor) can be advantageous when implied volatility is high because the premiums received from writing options tend to be more substantial. Additionally, if volatility returns to historical norms, these strategies can benefit from a potential decrease in implied volatility.
+
+### 2. Thematic Regime
+
+**Thematic Regime: Correlated Chop**
+
+- **Explanation:** The Signal Strength (Z-Score) is 0.40, which is relatively low, indicating that the macro theme is not strongly divergent or trending. The EU Risk Driver (BTP-Bund spread) of 58.13 bps and the Policy Driver (-129.46%) suggest a more balanced environment with no strong directional bias.
+
+**Why this favors buying vega:**
+- Given that the macro theme is in a range or choppy state, it makes sense to adopt a strategy that benefits from volatility without taking a directional view. Buying vega (such as Calendar_Spread or Diagonal_Spread) can be effective during periods of low signal strength and high implied volatility.
+
+### 3. Strategy Route
+
+**Optimal Strategy: Iron_Condor on FXE**
+
+- **Routing Logic:** The combination of a relatively expensive VIX (High IVR >50) and the current range or choppy state (Correlated Chop) suggests that a neutral strategy is most appropriate. An Iron_Condor involves selling both bull and bear call spreads, as well as buying both put and call spreads at different strike prices. This strategy can benefit from volatility without taking a strong directional view.
+
+**Why this is the best fit:**
+- **Neutral Position:** The Iron_Condor provides a balanced approach that can profit from changes in implied volatility while limiting potential losses.
+- **Bearish Bias on FXE (Short EUR):** Given the bearish macro theme, an Iron_Condor allows for some directional exposure to the bearish bias without fully committing to a short position. This strategy can still benefit if the market experiences increased volatility due to the current economic environment.
+
+### Summary
+
+1. **Volatility Regime:** High/Expensive, favoring selling premium.
+2. **Thematic Regime:** Correlated Chop, favoring buying vega.
+3. **Strategy Route:** Optimal strategy is an Iron_Condor on FXE, combining both directional and neutral elements to capitalize on the current market conditions.
+
+This approach ensures a balanced risk profile while aligning with the prevailing macroeconomic themes and volatility levels."

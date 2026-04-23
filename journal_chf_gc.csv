@@ -26,3 +26,38 @@ Given the managed haven status and the positive correlation between GLD and CHF,
 **Routed Strategies:**
 ROUTED_STRATEGY_GLD: Calendar_Spread
 ROUTED_STRATEGY_FXF: Calendar_Spread"
+2026-04-02,CHF_GC,Managed_vs_Unmanaged_Haven,Long GLD / Short FXF,Iron_Condor,1,Iron_Condor,1,-0.9173929260494256,-0.4479585973867035,0.3796813687136743,68.23717948717947,54.39803439803438,35.75425826738355,24.46333170577656,2.02,3945.0,"### 1. Macro Thesis Check
+
+**Primary Thematic Driver:** The primary thematic driver here is the **Managed vs. Unmanaged Haven** theme, as indicated by the Z-Score of -0.92 and the Regime Type of 0.380 (Positive = Correlated Haven). However, the SNB Intervention signal is currently inactive at 0.00 Billion, suggesting no recent intervention from the Swiss National Bank.
+
+- **Explanation:**
+  - The negative Z-Score (-0.92) suggests a stronger bias towards managed haven status for the CHF/GC pair.
+  - A positive Regime Type (0.380) indicates that both assets are moving in tandem, supporting the idea of a correlated haven trade.
+  - Since there is no recent SNB intervention, this trade should be based on the broader macro theme rather than any specific central bank action.
+
+### 2. Volatility Regimes
+
+- **GLD (Gold):** The IV Rank is 68.2% and VRP is 35.75, indicating that GLD is currently expensive.
+- **FXF (CHF via VIX Proxy):** The IV Rank is 54.4%, also suggesting that the CHF is relatively expensive.
+
+**Importance of Volatility Regimes:**
+- Both assets are in an ""expensive"" state, which means they are overvalued based on their implied volatility levels.
+- This combination suggests a potential premium-selling opportunity since both legs are currently expensive and may be due for a correction.
+
+### 3. Strategy Route (Pairs Trade)
+
+**Routing Logic:**
+
+Given the managed haven theme and the fact that both assets are expensive, this is an ideal scenario to sell premiums on both legs of the trade.
+
+- **GLD Leg:** Sell an Iron_Condor.
+- **FXF Leg:** Sell an Iron_Condor.
+
+**Explanation for Each Leg:**
+- **GLD (Iron_Condor):** Selling an Iron_Condor allows us to benefit from a potential decrease in implied volatility or a range-bound market, given that GLD is currently expensive and overvalued.
+- **FXF (Iron_Condor):** Similarly, selling an Iron_Condor on the CHF via VIX Proxy will allow us to profit if there's a correction in the high IV levels.
+
+### Conclusion
+
+ROUTED_STRATEGY_GLD: Iron_Condor
+ROUTED_STRATEGY_FXF: Iron_Condor"
