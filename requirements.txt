@@ -1,0 +1,13 @@
+pandas
+numpy
+matplotlib
+scipy
+yfinance
+fredapi
+requests
+jupyter
+nbclient
+nbformat
+fastapi
+uvicorn
+sqlalchemy
